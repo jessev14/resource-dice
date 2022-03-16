@@ -1,0 +1,24 @@
+.resource-dice {
+    flex: 0 0 12px;
+    margin-top: 5px
+}
+
+.resource-dice .break {
+    flex-basis: 100%;
+}
+
+.resource-dice a {
+    font-size: 16px;
+    margin-right: 6px;
+}
+
+.resource-dice a:hover {
+    text-shadow: 0 0 8px var(--color-shadow-primary);
+}
+
+.resource-dice input {
+    width: 140px;
+    height: 24px;
+    border: 1px solid #7a7971;
+    background: rgba(0, 0, 0, 0.05);
+}
