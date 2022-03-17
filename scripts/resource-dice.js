@@ -12,18 +12,30 @@ const resourceDefaults = {
 
 Hooks.on("renderActorSheet5eCharacter", (app, html, appData) => {
     const defaults = Object.entries(resourceDefaults);
-    const options = {
-        "0": "0",
-        "d6": "d6",
-        "d8": "d8",
-        "d10": "d10",
-        "d12": "d12"
-    };
 
     let data = ``;
     for (let i = 0; i < 6; i++) {
         const resourceName = app.object.getFlag(moduleName, `resource${i}.name`) ?? defaults[i][0];
         const resourceValue = app.object.getFlag(moduleName, `resource${i}.value`) ?? defaults[i][1];
+
+        let options;
+        if (i === 5) {
+            options = {
+                "d4": "d4",
+                "d6": "d6",
+                "d8": "d8",
+                "d10": "d10",
+                "d12": "d12"
+            };
+        } else {
+            options = {
+                "0": "0",
+                "d6": "d6",
+                "d8": "d8",
+                "d10": "d10",
+                "d12": "d12"
+            };
+        }
 
         const selected = {
             hash: {
@@ -35,7 +47,7 @@ Hooks.on("renderActorSheet5eCharacter", (app, html, appData) => {
         data += `
             <div>
                 <a class="${moduleName}-roll"><i class="fas fa-dice"></i></a>
-                <input name="flags.${moduleName}.resource${i}.name" value="${resourceName}" />
+                <input name="flags.${moduleName}.resource${i}.name" value="${resourceName}" ${i === 5 ? "" : "disabled"}/>
                 <select name="flags.${moduleName}.resource${i}.value">
                     ${optionsEl}
                 </select>
