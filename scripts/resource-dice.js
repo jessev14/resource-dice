@@ -19,7 +19,7 @@ Hooks.on("renderActorSheet5eCharacter", (app, html, appData) => {
         const resourceValue = app.object.getFlag(moduleName, `resource${i}.value`) ?? defaults[i][1];
 
         let options;
-        if (i === 5) {
+        if (i === 4) {
             options = {
                 "d4": "d4",
                 "d6": "d6",
