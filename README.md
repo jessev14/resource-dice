@@ -11,4 +11,4 @@ This module was funded by a commission. Donations help fund updates and new modu
  
 This module adds six resource dice fields to the inventory tab. The "Misc" resource can be renamed. Each resource can be set to a dice value (0, d4, d6 etc) and rolled.
 
-<img src="/img/resource-dice.png" />
+<img src="/img/resource-dice.png" width=700/>
