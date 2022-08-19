@@ -8,10 +8,10 @@
         "dnd5e"
     ],
     "esmodules": [
-        "./scripts/resource-dice.js"
+        "./scripts/main.js"
     ],
     "styles": [
-        "./styles/resource-dice.css"
+        "./styles/style.css"
     ],
     "minimumCoreVersion": "9",
     "compatibleCoreVersion": "9",

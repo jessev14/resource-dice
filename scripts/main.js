@@ -11,6 +11,11 @@ const resourceDefaults = {
 
 
 Hooks.on("renderActorSheet5eCharacter", (app, html, appData) => {
+    if (html.find(`div.flexrow.${moduleName}`).length) {
+        console.log('resource dice already injected; returning');
+        return;
+    }
+
     const defaults = Object.entries(resourceDefaults);
 
     let data = ``;
