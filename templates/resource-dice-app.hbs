@@ -1,0 +1,11 @@
+<form class="resource-dice" autocomplete="off">
+    {{#each resourceDice as |rd i|}}
+    <div class="resource-dice-rd" data-rd="{{i}}">
+        <input class="resource-label" value="{{rd.label}}" name="flags.{{../moduleID}}.resourceDiceData.{{i}}.label" />
+        <select class="resource-value" name="flags.{{../moduleID}}.resourceDiceData.{{i}}.value" data-dtype="Number">
+            {{selectOptions ../resourceDiceOptions selected=rd.value}}
+        </select>
+        <div class="roll-button"><a><i class="fa-solid fa-dice"></i></a></div>
+    </div>
+    {{/each}}
+</form>

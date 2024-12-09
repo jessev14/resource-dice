@@ -1,0 +1,17 @@
+form.resource-dice {
+    display: flex;
+    flex-direction: column;
+}
+
+form.resource-dice div.resource-dice-rd {
+    flex: 1;
+    min-width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+form.resource-dice div.resource-dice-rd select.resource-value {
+    flex: 1;
+}
